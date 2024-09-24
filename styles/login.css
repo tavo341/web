@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    display: flex;
+    justify-content: flex-end; /* Alinear el contenido a la derecha */
+    align-items: center;
+    min-height: 100vh; /* Ajusta la altura al 100% de la pantalla */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca la imagen detrás del formulario */
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el fondo */
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    max-width: 90%; /* Ajusta el ancho máximo al 90% de la pantalla */
+    margin-right: 35%; /* Ajustar el margen derecho */
+    position: fixed; /* Fijar el contenedor en la pantalla */
+    right: 0; /* Posicionar el contenedor a 50px del borde derecho */
+    top: 50%; /* Posicionar el contenedor en el centro vertical */
+    transform: translateY(-50%); /* Centrar verticalmente el contenedor */
+    z-index: 1; /* Coloca el formulario por encima de la imagen de fondo */
+}
+
+.correo {
+    font-size: 3000px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: start;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .login-container {
+        margin-right:0; /* Ajustar el margen derecho para pantallas pequeñas */
+    }
+}
